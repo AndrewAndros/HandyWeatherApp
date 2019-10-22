@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_root_view"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlue"
+    android:layout_height="match_parent"
+    tools:context=".ui.WeatherActivity">
+
+    <TextView
+        android:id="@+id/city_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambov"
+        style="@style/MainTextStyle"
+        android:layout_above="@id/weather_picture"
+        android:textSize="27sp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+  />
+
+    <ImageView
+        android:id="@+id/weather_picture"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@id/temperature_view"
+        android:src="@drawable/clear"/>
+
+    <TextView
+        android:id="@+id/temperature_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21\u2103"
+        style="@style/MainTextStyle"
+        android:layout_centerInParent="true"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/wind_picture_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/temperature_view"
+        android:src="@drawable/wind"/>
+
+    <TextView
+        android:id="@+id/wind_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="восточный ветер 3 м/с"
+        style="@style/MainTextStyle"
+        android:layout_below="@id/wind_picture_view"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/others_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="влажность: 48%  атм.давление: 755мм"
+        style="@style/MainTextStyle"
+        android:layout_below="@id/wind_text_view"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
